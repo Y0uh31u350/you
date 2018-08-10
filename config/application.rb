@@ -28,6 +28,7 @@ module RailSampleApp
     # the framework and any gems in your application.
 
     # Don't generate system test files.
+    config.read_encrypted_secrets
     config.generators.system_tests = nil
     config.generators do |g|
       g.skip_routes true

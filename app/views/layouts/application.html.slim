@@ -9,5 +9,9 @@ html
     = javascript_include_tag 'application'
   body
     = render "layouts/header"
-    .container.py-4
+    .container.py-4.px-0
+      = flash_messages(flash[:success], :success) if flash[:success]
+      = flash_messages(flash[:error], :danger) if flash[:error]
+      = flash_messages(flash[:alert], :warning) if flash[:alert]
+      = flash_messages(flash[:notice], :info) if flash[:notice]
       = yield

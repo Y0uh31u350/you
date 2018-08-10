@@ -1,2 +1,8 @@
 nav.navbar.navbar-light style=("background-color: #e3f2fd;")
   a.navbar-brand href="/" = ApplicationHelper::APP_NAME
+  - if user_signed_in?
+    ul.nav.justify-content-end
+      li.nav-item
+        = link_to "プロフィール編集", edit_user_registration_path, class: "nav-link text-secondary"
+      li.nav-item
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link text-secondary"
