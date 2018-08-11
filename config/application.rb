@@ -35,6 +35,7 @@ module RailSampleApp
       g.stylesheets false
       g.javascripts false
       g.helper false
+    config.active_job.queue_adapter = :sidekiq
     end
   end
 end
