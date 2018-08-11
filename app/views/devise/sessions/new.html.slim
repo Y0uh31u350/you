@@ -2,9 +2,9 @@ h2
   | Log in
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .form-group
-    = f.label :email
+    = f.label :email or username
     br
-    = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control col-md-5 col-sm", placeholder: "Enter email"
+    = f.text_field :login, autofocus: true, autocomplete: "email", class: "form-control col-md-5 col-sm", placeholder: "Enter email or username"
   .form-group
     = f.label :password
     br

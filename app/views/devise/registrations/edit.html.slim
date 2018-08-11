@@ -4,6 +4,10 @@ h2
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = devise_error_messages!
   .form-group
+    = f.label :name
+    br
+    = f.text_field :name, class: "form-control col-md-5 col-sm", placeholder: "Username"
+  .form-group
     = f.label :email
     br
     = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control col-md-5 col-sm", placeholder: "Enter email"
